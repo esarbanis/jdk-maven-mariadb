@@ -177,8 +177,8 @@ CMD ["mvn"]
 # = SETUP ENTRY POINT AND RUN MYSQL =
 # ===================================
 
-RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
-RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
+RUN ln -s /usr/local/bin/docker-entrypoint.sh / # backwards compat
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306
